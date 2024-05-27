@@ -1,21 +1,152 @@
-import { Tilt } from 'react-tilt'
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I LOVE YOU❤️🦋🐼</title>
 
-const defaultOptions = {
-	reverse:        false,  // reverse the tilt direction
-	max:            35,     // max tilt rotation (degrees)
-	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
-	scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
-	speed:          1000,   // Speed of the enter/exit transition
-	transition:     true,   // Set a transition on enter/exit.
-	axis:           null,   // What axis should be disabled. Can be X or Y.
-	reset:          true,    // If the tilt effect has to be reset on exit.
-	easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+
+   <style>
+    html,body{
+  margin:0px;
+  height:100%;
+     text-shadow: 2px 3px 2px #DDA0DD;
+/*    font-family: 'Lobster', cursive;  */
+font-family: 'blackletter', cursive;
+ }
+.bg_heart{
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+ overflow:hidden;
+ /* background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOyxoMfoyRy9tny0b1DgbPCH_gar-dDu2yZg&usqp=CAU'); */
+ background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjPvMMn8DoN7N3pBUm5u4N4OZ7P4Cgc9AqGY5bBx8IpP6PxTZWPnBfco&s=10");
+  /* background-image:url("https://i.pinimg.com/originals/51/d8/37/51d8374126446d495348b6032202126f.jpg"); */
+  background-size:100% 100%;
+  z-index:-1;
 }
 
-const App = () => {
-  return (
-    <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
-      <div>👽</div>
-    </Tilt>
-  )
+.container{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  text-align:center;
+  color:white;
+    font-family: 'blackletter', cursive;
+/* font-family: 'Lobster', cursive; */
 }
+
+
+.heart{
+  position:absolute;
+  top:-50%;
+  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -m-transform:rotate(-45deg);
+}
+.heart:before{
+  position:absolute;
+  top:-50%;
+  left:0;
+  display:block;
+  content:"";
+  width:100%;
+  height:100%;
+  background:inherit;
+  border-radius:100%;
+}
+.heart:after{
+  position:absolute;
+  top:0;
+  right:-50%;
+  display:block;
+  content:"";
+  width:100%;
+  height:100%;
+  background:inherit;
+  border-radius:100%;
+}
+
+@keyframes love {
+  0%{top:110%}
+}
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body id="x" autoplay="play()">
+
+  <audio id="a" src="https://www.dropbox.com/scl/fi/tlooj0rwe4nt8l4devfch/Heeriye-Slowed-Reverb-_320-PagalWorld.com.pe.mp3?rlkey=xr7wrjdry8f5ov2l9vv8aj6hs&dl=1" autoplay loop></audio>
+
+
+<div class="bg_heart">
+</div>
+
+<div class="container">
+
+
+<h2 id="text1"></h2>
+
+
+  </div>
+
+
+<script>
+ var name = "Shikha 🐼"
+
+    function play() {
+        document.getElementById('a').play()
+    }
+
+var love = setInterval(function(){
+  var r_num = Math.floor(Math.random() * 40) + 1;
+    var r_size = Math.floor(Math.random() * 65) + 10;
+    var r_left = Math.floor(Math.random() * 100) + 1;
+    var r_bg = Math.floor(Math.random() * 25) + 100;
+  var r_time = Math.floor(Math.random() * 5) + 5;
+  $('.bg_heart').append("<div class='heart' style='width:"+r_size+"px;height:"+r_size+"px;left:"+r_left+"%;background:rgba(255,"+(r_bg-25)+","+r_bg+",1);-webkit-animation:love "+r_time+"s ease;-moz-animation:love "+r_time+"s ease;-ms-animation:love "+r_time+"s ease;animation:love "+r_time+"s ease'></div>");
+
+  $('.bg_heart').append("<div class='heart' style='width:"+(r_size-10)+"px;height:"+(r_size-10)+"px;left:"+(r_left+r_num)+"%;background:rgba(255,"+(r_bg-25)+","+(r_bg+25)+",1);-webkit-animation:love "+(r_time+5)+"s ease;-moz-animation:love "+(r_time+5)+"s ease;-ms-animation:love "+(r_time+5)+"s ease;animation:love "+(r_time+5)+"s ease'></div>");
+
+
+},500);
+
+var i = 0;
+var txt1 = "Hey  "+ name +".....!  <<               Just wanted to confront something important today. <<<                I wanted to tell you this since a long time but😓...!                                                                           > we are very good friends and I never wanted that because of this our friendship ruin so I always avoided it < But now🙇.  <<                  < I Don't know how it happened but you're someone really special to me🌺....! <<                           I don't know how but everything related to you and also the time we've spent together is really special to me 🎀...!                                                     > Everything about you is always intresting for me☺️...!                     << I am somewhat sceptical and afraid that you won't understand so I never told this but now it really started to hurt everytime😔...!                                                     > every passing day I thought that I will confront everything to you when we met next time and I tried but couldn't tell you.😓<                       I want to be with you and make you happy and see you smile for rest of my life no matter till tomorrow or maybe next 80 years really don't know.⏳                  <<I want to create beautiful memories with you and share our bond together and walk this path.👫           << So, "+ name +", can we both come together for life?                                                        > Will you give me the opportunity to be  your partner, your confidant, and your love?<       I Love You <"+ name +"❣️....! |                  <<<< I promise to provide you with all my love and happiness which I can so can we be together🐼❣️🦒 ...!";
+var speed = 70;
+typeWriter();
+function typeWriter() {
+  if (i < txt1.length) {        
+     if(txt1.charAt(i)=='<')
+      document.getElementById("text1").innerHTML += '</br>'
+    else if(txt1.charAt(i)=='>')
+      document.getElementById("text1").innerHTML = ''
+    else if(txt1.charAt(i)=='|')
+      {
+        $(".bg_heart").css("background-image", "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRse2Yjchc4dpgAoyyEa-3KhvAjOYlh-3vvYQ&usqp=CAU')")
+      }
+    else
+      document.getElementById("text1").innerHTML += txt1.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+  </body>
+	</html>
+	
